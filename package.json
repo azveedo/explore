@@ -1,0 +1,39 @@
+{
+  "name": "intercambio_tcc",
+  "version": "1.0.0",
+  "description": "Site de intercâmbio desenvolvido para TCC.",
+  "main": "app.js",
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "start": "parcel ./src/pages/*.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Louam Azevedo",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "autoprefixer": "^10.4.14",
+    "css-loader": "^6.7.3",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.1",
+    "parcel": "^2.8.3",
+    "postcss": "^8.4.23",
+    "postcss-loader": "^7.2.4",
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@popperjs/core": "^2.11.7",
+    "bootstrap": "^5.3.0-alpha3",
+    "jquery": "^3.6.4",
+    "owl.carousel": "^2.3.4",
+    "rellax": "^1.12.1",
+    "swiper": "^9.2.4"
+  },
+  "keywords": []
+}

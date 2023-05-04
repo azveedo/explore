@@ -1,0 +1,512 @@
+@import '../sections/shared';
+@import '../sections/carousel';
+
+.text {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: url(../../images/idiomas.png) no-repeat 50% 50%;
+  background-size: cover;
+  mix-blend-mode: overlay;
+  z-index: 10;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+
+  /* CARDS - MOBILE */
+
+  .items {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .item {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    margin: 10px auto;
+  }
+
+  .img-overlay {
+    display: none;
+  }
+
+  .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .item-copy {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+
+    font-size: 0.75em;
+    padding: 5em;
+  }
+
+  @media (max-width: 900px) and (max-height: 700px) {
+    /* CARDS */
+    .items {
+      width: 100%;
+      height: 300vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .divider {
+      display: none;
+    }
+
+    .item {
+      position: relative;
+      width: 80%;
+      margin: 10px auto;
+    }
+
+    .img-overlay {
+      display: none;
+    }
+
+    .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .item-copy {
+      position: relative;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      z-index: 2;
+
+      font-size: 0.75em;
+      padding: 3.5em;
+    }
+
+    /* MENU */
+
+    header {
+      position: relative;
+      z-index: 3;
+    }
+
+    .menu-container {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .menu {
+      background: #f9f9f9;
+      height: 1rem;
+      margin: 1.6rem;
+      padding: 1.5rem;
+      border-radius: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font-size: 1rem;
+      font-weight: 400;
+      transition: 0.3s;
+    }
+
+    .menu:hover {
+      background: #f9f9f9;
+      height: 1rem;
+      margin: 1.6rem;
+      padding: 1.5rem;
+      border-radius: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font-size: 1rem;
+      font-weight: 400;
+
+      transition: 0.3s;
+    }
+
+    .menu-expand {
+      display: none;
+    }
+
+    .menu[disabled]:hover {
+      display: none;
+    }
+
+    .mouse-scroll {
+      display: none;
+    }
+
+    .menu-right .account {
+      display: none;
+    }
+
+    .menu-right {
+      align-items: center;
+      flex: 1;
+      justify-content: flex-end;
+      display: flex;
+      position: fixed;
+
+      right: 0;
+      margin-right: 40px;
+    }
+
+    #menu-center {
+      /* display: block; */
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      z-index: 100;
+    }
+
+    #menu-center.active {
+      position: relative;
+      display: flex;
+      width: 100%;
+      padding: 1rem 0;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      margin-top: 20px;
+    }
+
+    #menu-center.active a {
+      margin: 0.2rem 0;
+      font-size: 1rem;
+      line-height: 70px;
+    }
+
+    #menu-toggle-btn {
+      display: block;
+    }
+
+    #btn-mobile {
+      display: flex;
+      gap: 0.5rem;
+      border: none;
+      background-color: transparent;
+    }
+
+    #hamburguer {
+      width: 20px;
+      border-top: 2px solid;
+    }
+
+    #hamburguer::after,
+    #hamburguer::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin-top: 5px;
+      background: currentColor;
+
+      transition: 0.3s;
+      position: relative;
+    }
+
+    #menu-toggle-btn.active #hamburguer {
+      border-top-color: transparent;
+    }
+
+    #menu-toggle-btn.active #hamburguer::before {
+      transform: rotate(135deg);
+    }
+
+    #menu-toggle-btn.active #hamburguer::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
+
+  /* FORM ENTRAR EM CONTATO - ESPECIALISTAS */
+
+  .box-texts {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .form-questions-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+
+    margin-top: 0px;
+  }
+
+  .form-questions-section .box-container-forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-questions-section .box-container-forms .box-fields {
+    width: 100%;
+  }
+
+  .form-questions-section .box-container-forms .box-fields input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    color: #333;
+    background: transparent;
+    letter-spacing: 0.5px;
+  }
+
+  .form-questions-section .box-container-forms .box-fields select {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    color: #333;
+    background: transparent;
+    letter-spacing: 0.5px;
+  }
+
+  .box-container-img {
+    display: none;
+  }
+
+  .box-container-texts {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .form-questions-section .box-container-texts {
+    max-width: 100%;
+  }
+
+  .box-container-texts {
+    .box-texts {
+      padding: 30px;
+    }
+  }
+
+  @media (max-width: 450px) and (min-width: 200px) {
+    .box-container-forms {
+      display: flex;
+      flex-direction: row;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .grid-container-box-50 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 20px;
+
+        .box-fields-box-50 {
+          width: 100%;
+          display: flex;
+
+          input {
+            padding: 10px 0px 10px 20px;
+            width: 100%;
+            outline: none;
+            font-weight: 500;
+            font-size: 10px;
+            border-radius: 10px;
+            border: 1px solid #000;
+            color: #333;
+            background: transparent;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+
+      .box-fields {
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+
+        input {
+          width: 100%;
+          padding: 10px 20px;
+          outline: none;
+          font-weight: 500;
+          font-size: 10px;
+          border-radius: 10px;
+          border: 1px solid #000;
+          color: #333;
+          background: transparent;
+          letter-spacing: 0.5px;
+        }
+
+        select {
+          width: 100%;
+          padding: 10px 20px;
+          outline: none;
+          font-weight: 500;
+          font-size: 10px;
+          border-radius: 10px;
+          border: 1px solid #000;
+          color: #333;
+          background: transparent;
+          letter-spacing: 0.5px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+
+        .textarea {
+          width: 100%;
+
+          p {
+            margin-bottom: 20px;
+          }
+
+          textarea {
+            width: 100%;
+            border-radius: 5px;
+            resize: none;
+            border: 1px solid #000;
+            color: #333;
+          }
+        }
+      }
+
+      .select-field {
+        .btn-standard {
+          background-color: #f1f1f1;
+          min-width: 130px;
+          min-height: 55px;
+          outline: none;
+          color: #fff;
+          font-size: 14px;
+          line-height: 15px;
+          text-align: center;
+          cursor: pointer;
+          border: 1px solid #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 15px;
+          letter-spacing: -0.005em;
+
+          border-radius: 30px;
+          color: #000;
+          width: 100%;
+
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  /* DEPOIMENTOS */
+
+  @media (max-width: 900px) {
+    .owl-carousel-padrao .owl-dots {
+      bottom: 130px;
+    }
+
+    .swiper-slide {
+      .item {
+        position: relative;
+        height: 100%;
+      }
+    }
+
+    .btn-anchor-carousel {
+      a {
+        width: 75px;
+        height: 30px;
+      }
+    }
+
+  /* FAQ's */
+
+  .faqs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 60px;
+
+    .questions {
+      width: 85%;
+      margin: 0 auto;
+
+      .question {
+        margin-bottom: 20px;
+
+        button {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .collapsible {
+    color: #000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+
+    border-bottom: 1px solid #ccc;
+  }
+
+  .collapseActive,
+  .collapsible:hover {
+    text-decoration: underline;
+  }
+
+  .collapseActive {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  .contentCollapse {
+    padding: 0 18px;
+    font-size: 12px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+}
+}
