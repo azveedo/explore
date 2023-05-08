@@ -1,0 +1,110 @@
+.faqs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 60px;
+
+  .questions {
+    width: 50%;
+    margin: 0 auto;
+
+    .question {
+      margin-bottom: 20px;
+
+      button {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.collapsible {
+  color: #000;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+
+  border-bottom: 1px solid #ccc;
+}
+
+.collapseActive,
+.collapsible:hover {
+  text-decoration: underline;
+}
+
+.collapseActive {
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.contentCollapse {
+  padding: 0 18px;
+  font-size: 12px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+@media (max-width: 900px) {
+
+  /* FAQ's */
+
+  .faqs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 60px;
+
+    .questions {
+      width: 85%;
+      margin: 0 auto;
+
+      .question {
+        margin-bottom: 20px;
+
+        button {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .collapsible {
+    color: #000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+
+    border-bottom: 1px solid #ccc;
+  }
+
+  .collapseActive,
+  .collapsible:hover {
+    text-decoration: underline;
+  }
+
+  .collapseActive {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  .contentCollapse {
+    padding: 0 18px;
+    font-size: 12px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+}
