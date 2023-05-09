@@ -1,6 +1,6 @@
 <?php
 
-require_once '../model/conexao';
+require_once '../model/conexao.php';
 $pdo = new Conexao("dbTurism", "localhost", "root", "");
 include('register.html');
 

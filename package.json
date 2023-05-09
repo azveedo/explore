@@ -2,9 +2,9 @@
   "name": "intercambio_tcc",
   "version": "1.0.0",
   "description": "Site de intercâmbio desenvolvido para TCC.",
-  "main": "app.js",
+  "source": "src/index.html",
   "scripts": {
-    "build": "NODE_ENV=production webpack",
+    "build": "parcel build ./src/pages/*.html",
     "start": "parcel ./src/pages/*.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
